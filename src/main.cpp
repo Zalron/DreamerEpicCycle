@@ -1,5 +1,4 @@
-#include <vk_engine.h>
-#include <flecs.h>
+#include <vk_engine.h> 
 
 int main(int argc, char* argv[])
 {

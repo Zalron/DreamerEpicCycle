@@ -1,6 +1,7 @@
 ﻿#include <vk_initializers.h>
 
-VkCommandPoolCreateInfo vkinit::command_pool_create_info(uint32_t queueFamilyIndex, VkCommandPoolCreateFlags flags /*= 0*/)
+
+VkCommandPoolCreateInfo vkinit::command_pool_create_info(uint32_t queueFamilyIndex, VkCommandPoolResetFlags flags /*= 0*/)
 {
 	VkCommandPoolCreateInfo info = {};
 	info.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
@@ -110,7 +111,7 @@ VkRenderPassBeginInfo vkinit::renderpass_begin_info(VkRenderPass renderPass, VkE
 	info.renderArea.offset.x = 0;
 	info.renderArea.offset.y = 0;
 	info.renderArea.extent = windowExtent;
-	info.clearValueCount = 1;
+	info.clearValueCount = 0;
 	info.pClearValues = nullptr;
 	info.framebuffer = framebuffer;
 
@@ -165,7 +166,7 @@ VkPipelineRasterizationStateCreateInfo vkinit::rasterization_state_create_info(V
 	info.polygonMode = polygonMode;
 	info.lineWidth = 1.0f;
 	//no backface cull
-	info.cullMode = VK_CULL_MODE_NONE;
+	info.cullMode = VK_CULL_MODE_BACK_BIT;
 	info.frontFace = VK_FRONT_FACE_CLOCKWISE;
 	//no depth bias
 	info.depthBiasEnable = VK_FALSE;
@@ -319,6 +320,39 @@ VkSamplerCreateInfo vkinit::sampler_create_info(VkFilter filters, VkSamplerAddre
 	info.addressModeU = samplerAdressMode;
 	info.addressModeV = samplerAdressMode;
 	info.addressModeW = samplerAdressMode;
-
+	
 	return info;
+}
+
+VkBufferMemoryBarrier vkinit::buffer_barrier(VkBuffer buffer, uint32_t queue)
+{
+	VkBufferMemoryBarrier barrier{};
+	barrier.buffer = buffer;
+	barrier.size = VK_WHOLE_SIZE;
+	//barrier2.dstAccessMask = VK_ACCESS_INDIRECT_COMMAND_READ_BIT;
+	//barrier2.srcAccessMask = VK_ACCESS_SHADER_WRITE_BIT;
+	barrier.srcQueueFamilyIndex = queue;
+	barrier.dstQueueFamilyIndex = queue;
+	barrier.sType = VK_STRUCTURE_TYPE_BUFFER_MEMORY_BARRIER;
+	barrier.pNext = nullptr;
+
+	return barrier;
+}
+
+VkImageMemoryBarrier vkinit::image_barrier(VkImage image, VkAccessFlags srcAccessMask, VkAccessFlags dstAccessMask, VkImageLayout oldLayout, VkImageLayout newLayout, VkImageAspectFlags aspectMask)
+{
+	VkImageMemoryBarrier result = { VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER };
+
+	result.srcAccessMask = srcAccessMask;
+	result.dstAccessMask = dstAccessMask;
+	result.oldLayout = oldLayout;
+	result.newLayout = newLayout;
+	result.srcQueueFamilyIndex = VK_QUEUE_FAMILY_IGNORED;
+	result.dstQueueFamilyIndex = VK_QUEUE_FAMILY_IGNORED;
+	result.image = image;
+	result.subresourceRange.aspectMask = aspectMask;
+	result.subresourceRange.levelCount = VK_REMAINING_MIP_LEVELS;
+	result.subresourceRange.layerCount = VK_REMAINING_ARRAY_LAYERS;
+
+	return result;
 }

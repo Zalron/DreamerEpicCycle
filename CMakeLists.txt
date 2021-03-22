@@ -2,7 +2,6 @@
 # project specific logic here.
 #
 cmake_minimum_required (VERSION 3.8)
-cmake_policy(SET CMP0063 NEW)
 
 project ("DreamerUniverse-cvfo")
 
@@ -11,9 +10,15 @@ find_package(Vulkan REQUIRED)
 add_subdirectory(third_party)
 
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/bin")
-
+ 
+add_subdirectory(assetlib)
+add_subdirectory(asset-baker)
 add_subdirectory(src)
-find_program(GLSL_VALIDATOR glslangValidator HINTS /usr/bin /usr/local/bin $ENV{VULKAN_SDK}/Bin/ $ENV{VULKAN_SDK}/Bin32/)
+if (${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL "AMD64")
+  set(GLSL_VALIDATOR "$ENV{VULKAN_SDK}/Bin/glslangValidator.exe")
+else()
+  set(GLSL_VALIDATOR "$ENV{VULKAN_SDK}/Bin32/glslangValidator.exe")
+endif()  
 
 
 file(GLOB_RECURSE GLSL_SOURCE_FILES
@@ -37,4 +42,5 @@ endforeach(GLSL)
 add_custom_target(
     Shaders 
     DEPENDS ${SPIRV_BINARY_FILES}
+        SOURCES ${GLSL_SOURCE_FILES}
     )
