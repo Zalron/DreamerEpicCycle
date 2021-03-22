@@ -1,6 +1,6 @@
 
 # Add source to this project's executable.
-add_executable (DreamerUniverse 
+add_executable (DreamerUniverse-cvfo 
   main.cpp
   vk_engine.cpp
   vk_engine.h
@@ -13,10 +13,10 @@ add_executable (DreamerUniverse
   vk_initializers.h)
 
 
-set_property(TARGET DreamerUniverse PROPERTY VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:DreamerUniverse>)
+set_property(TARGET DreamerUniverse-cvfo PROPERTY VS_DEBUGGER_WORKING_DIRECTORY $<TARGET_FILE_DIR:DreamerUniverse-cvfo>)
 
-target_include_directories(DreamerUniverse PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_include_directories(DreamerUniverse-cvfo PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 
-target_link_libraries(DreamerUniverse vkbootstrap vma glm tinyobjloader imgui stb_image)
+target_link_libraries(DreamerUniverse-cvfo vkbootstrap vma glm tinyobjloader imgui stb_image)
 
-target_link_libraries(DreamerUniverse Vulkan::Vulkan sdl2)
+target_link_libraries(DreamerUniverse-cvfo Vulkan::Vulkan sdl2)

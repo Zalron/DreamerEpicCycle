@@ -2,9 +2,9 @@
 # project specific logic here.
 #
 cmake_minimum_required (VERSION 3.8)
+cmake_policy(SET CMP0063 NEW)
 
 project ("DreamerUniverse-cvfo")
-
 
 find_package(Vulkan REQUIRED)
 

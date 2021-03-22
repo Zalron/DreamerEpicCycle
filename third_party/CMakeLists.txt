@@ -60,3 +60,12 @@ target_sources(imgui PRIVATE
 target_link_libraries(imgui PUBLIC Vulkan::Vulkan sdl2)
 
 target_include_directories(stb_image INTERFACE stb_image)
+
+add_library(flecs STATIC)
+
+target_include_directories(flecs PRIVATE flecs)
+
+target_sources(flecs PRIVATE
+  flecs/flecs.c
+  flecs/flecs.h
+  )
