@@ -1,4 +1,5 @@
 find_package(Vulkan REQUIRED)
+include(ExternalProject)
 
 add_library(vkbootstrap STATIC)
 add_library(glm INTERFACE)
@@ -8,10 +9,13 @@ add_library(stb_image INTERFACE)
 add_library(json INTERFACE)
 add_library(tinyobjloader STATIC)
 add_library(spirv_reflect STATIC)
-
+add_library(imgui STATIC)
 add_library(fmt_lib STATIC)
+add_library(assimp INTERFACE)
 
 add_library(lz4 STATIC)
+
+add_library(flecs STATIC)
 
 
 #set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/libs")
@@ -19,11 +23,11 @@ add_library(lz4 STATIC)
 
 add_subdirectory(gltf)
 
-#ExternalProject_Add(nvtools
-#SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/nvidia-texture-tools"
-#BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/nvlibs"
-#CMAKE_ARGS -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=${PROJECT_SOURCE_DIR}/libs -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=#${PROJECT_SOURCE_DIR}/libs -DCMAKE_CXX_STANDARD=17
-#)
+ExternalProject_Add(nvtools
+SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/nvidia-texture-tools"
+BINARY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/nvlibs"
+CMAKE_ARGS -DCMAKE_ARCHIVE_OUTPUT_DIRECTORY=${PROJECT_SOURCE_DIR}/libs -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=${PROJECT_SOURCE_DIR}/libs -DCMAKE_CXX_STANDARD=17
+)
 
 add_library(nvtt INTERFACE)
 target_include_directories(nvtt INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/nvidia-texture-tools/src/nvtt")
@@ -50,12 +54,11 @@ set(TRACY_DIR "${CMAKE_CURRENT_SOURCE_DIR}/tracy" CACHE FILEPATH "Path to Tracy"
 add_library(tracy OBJECT "${TRACY_DIR}/TracyClient.cpp")
 target_include_directories(tracy PUBLIC "${TRACY_DIR}")
 target_compile_definitions(tracy PUBLIC TRACY_ENABLE)
-
-target_include_directories(vkbootstrap PUBLIC vkbootstrap)
 target_sources(vkbootstrap PRIVATE 
     "${CMAKE_CURRENT_SOURCE_DIR}/vkbootstrap/VkBootstrap.h"
     "${CMAKE_CURRENT_SOURCE_DIR}/vkbootstrap/VkBootstrap.cpp"
 )
+
 target_link_libraries(vkbootstrap PUBLIC Vulkan::Vulkan $<$<BOOL:UNIX>:${CMAKE_DL_LIBS}>)
 
 target_sources(spirv_reflect PRIVATE 
@@ -89,8 +92,8 @@ target_sources(tinyobjloader PRIVATE
 
 target_include_directories(tinyobjloader PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/tinyobjloader" )
 
-add_library(sdl2 INTERFACE)
 set(sdl2_DIR "SDL_PATH" CACHE FILEPATH "Path to SDL2")
+add_library(sdl2 INTERFACE)
 target_include_directories(sdl2 INTERFACE "${sdl2_DIR}/include" "${sdl2_image_DIR}/include" )
 target_link_directories(sdl2 INTERFACE "${sdl2_DIR}/lib/x64" "${sdl2_image_DIR}/lib/x64")
 target_link_libraries(sdl2 INTERFACE SDL2 SDL2main)
@@ -105,30 +108,27 @@ endif()
 
 target_link_libraries(sdl2 INTERFACE SDL2 SDL2main)
 
-add_library(imgui STATIC)
+target_sources(imgui PUBLIC 
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui.cpp"
 
-target_include_directories(imgui PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/imgui")
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_stdlib.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_stdlib.cpp"
 
-target_sources(imgui PRIVATE 
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_demo.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_draw.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_widgets.cpp"
 
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_stdlib.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_stdlib.cpp"
-
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_demo.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_draw.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_widgets.cpp"
-
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_impl_vulkan.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_impl_sdl.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_impl_vulkan.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_impl_vulkan.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_impl_sdl.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_impl_sdl.cpp"
 )
 
 target_link_libraries(imgui PUBLIC Vulkan::Vulkan sdl2)
 
-target_include_directories(stb_image INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/stb_image" )
 
-add_library(assimp INTERFACE)
+target_include_directories(stb_image INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/stb_image" )
 
 
 set(assimp_dir "${CMAKE_CURRENT_SOURCE_DIR}/assimp_build")
@@ -139,6 +139,7 @@ set(assimp_lib "${CMAKE_CURRENT_SOURCE_DIR}/assimp_build/code/Release/assimp-vc1
 target_include_directories(assimp INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/assimp/include")
 target_link_libraries(assimp INTERFACE "${assimp_lib}" )
 
+
 ## FMT LIB
 target_include_directories(fmt_lib PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/fmt_lib")
 
@@ -147,11 +148,12 @@ file(GLOB FMT_FILES "${CMAKE_CURRENT_SOURCE_DIR}/fmt_lib/fmt/*")
 target_sources(fmt_lib PRIVATE ${FMT_FILES})
 
 
-add_library(flecs STATIC)
+target_include_directories(flecs PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/flecs")
 
-target_include_directories(flecs PRIVATE flecs)
+file(GLOB FMT_FILES "${CMAKE_CURRENT_SOURCE_DIR}/flecs*")
 
-target_sources(flecs PRIVATE
-  flecs/flecs.c
-  flecs/flecs.h
-  )
+target_sources(flecs PRIVATE 
+    "${CMAKE_CURRENT_SOURCE_DIR}/flecs/flecs.h"
+    "${CMAKE_CURRENT_SOURCE_DIR}/flecs/flecs.c"
+)
+
