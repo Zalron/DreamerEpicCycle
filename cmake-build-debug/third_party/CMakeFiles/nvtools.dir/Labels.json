@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/CMakeFiles/nvtools"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/CMakeFiles/nvtools.rule"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/CMakeFiles/nvtools-complete.rule"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-build.rule"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-configure.rule"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-download.rule"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-install.rule"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-patch.rule"
+		},
+		{
+			"file" : "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"nvtools"
+		],
+		"name" : "nvtools"
+	}
+}

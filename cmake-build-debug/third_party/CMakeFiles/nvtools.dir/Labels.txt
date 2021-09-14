@@ -1,0 +1,13 @@
+# Target labels
+ nvtools
+# Source files and their labels
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/CMakeFiles/nvtools
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/CMakeFiles/nvtools.rule
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/CMakeFiles/nvtools-complete.rule
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-build.rule
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-configure.rule
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-download.rule
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-install.rule
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-mkdir.rule
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-patch.rule
+C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/nvtools-prefix/src/nvtools-stamp/nvtools-update.rule
