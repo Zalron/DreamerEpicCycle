@@ -1,45 +1,64 @@
-﻿# CMakeList.txt : CMake project for vulkan_guide, include source and define
-# project specific logic here.
-#
-cmake_minimum_required (VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.20)
+project(DreamerUniverse-cvfo)
 
-project ("DreamerUniverse-cvfo")
+set(CMAKE_CXX_STANDARD 17)
 
-set(CMAKE_CXX_STANDARD 14)
+include_directories(DreamerUniverse-cvfo/src)
+include_directories(DreamerUniverse-cvfo/third-party)
 
-find_package(Vulkan REQUIRED)
 
-include_directories(third_party)
-
-set (CMAKE_RUNTIME_OUTPUT_DIRECTORY "${DreamerUniverse-cvfo}/bin")
-
-include_directories(src)
-
-find_program(GLSL_VALIDATOR glslangValidator HINTS /usr/bin /usr/local/bin $ENV{VULKAN_SDK}/Bin/ $ENV{VULKAN_SDK}/Bin32/)
-
-## find all the shader files under the shaders folder
-file(GLOB_RECURSE GLSL_SOURCE_FILES
-        "${PROJECT_SOURCE_DIR}/shaders/*.frag"
-        "${PROJECT_SOURCE_DIR}/shaders/*.vert"
-        "${PROJECT_SOURCE_DIR}/shaders/*.comp"
+add_executable(DreamerUniverse-cvfo
+        src/main.cpp
+        src/first_app.cpp
+        src/first_app.hpp
+        src/keyboard_movement_controller.cpp
+        src/keyboard_movement_controller.hpp
+        src/lve_buffer.cpp
+        src/lve_buffer.hpp
+        src/lve_camera.cpp
+        src/lve_camera.hpp
+        src/lve_device.cpp
+        src/lve_device.hpp
+        src/lve_frame_info.hpp
+        src/lve_game_object.cpp
+        src/lve_game_object.hpp
+        src/lve_model.cpp
+        src/lve_model.hpp
+        src/lve_pipeline.cpp
+        src/lve_pipeline.hpp
+        src/lve_renderer.cpp
+        src/lve_renderer.hpp
+        src/lve_swap_chain.cpp
+        src/lve_swap_chain.hpp
+        src/lve_utils.hpp
+        src/simple_render_system.cpp
+        src/simple_render_system.hpp
+        src/lve_window.cpp
+        src/lve_window.hpp
+        third_party/tinyobjloader/tiny_obj_loader.h
         )
 
-## iterate each shader
-foreach(GLSL ${GLSL_SOURCE_FILES})
-    message(STATUS "BUILDING SHADER")
-    get_filename_component(FILE_NAME ${GLSL} NAME)
-    set(SPIRV "${PROJECT_SOURCE_DIR}/shaders/${FILE_NAME}.spv")
-    message(STATUS ${GLSL})
-    ##execute glslang command to compile that specific shader
-    add_custom_command(
-            OUTPUT ${SPIRV}
-            COMMAND ${GLSL_VALIDATOR} -V ${GLSL} -o ${SPIRV}
-            DEPENDS ${GLSL})
-    list(APPEND SPIRV_BINARY_FILES ${SPIRV})
-endforeach(GLSL)
+foreach(FILE ${SHADERS})
+    get_filename_component(FILE_NAME ${FILE} NAME)
+    set(OUTFILE "${PROJECT_BINARY_DIR}/Shaders/${FILE_NAME}.spv")
+    add_custom_command(TARGET VulkanEngine PRE_BUILD COMMAND Vulkan::glslc -c ${FILE} -o ${OUTFILE})
+endforeach(FILE)
 
-add_custom_target(
-        Shaders
-        DEPENDS ${SPIRV_BINARY_FILES}
-)
+if (WIN32)
+    target_include_directories(${PROJECT_NAME} PUBLIC
+            c:/SDK/VulkanSDK/1.2.189.2/Include
+            c:/SDK/glfw-3.3.4/include
+            c:/SDK/glm
+            ${PROJECT_SOURCE_DIR}/third_party
+            )
 
+    target_link_directories(${PROJECT_NAME} PUBLIC
+            c:/SDK/VulkanSDK/1.2.189.2/Lib
+            c:/SDK/glfw-3.3.4.bin.WIN64/lib-vc2019
+            )
+
+    target_link_libraries(${PROJECT_NAME} glfw3 vulkan-1)
+elseif (UNIX)
+    target_include_directories(${PROJECT_NAME} PUBLIC src/third_party)
+    target_link_libraries(${PROJECT_NAME} glfw vulkan)
+endif()

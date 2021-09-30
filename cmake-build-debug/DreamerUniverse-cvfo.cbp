@@ -17,11 +17,59 @@
 					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Shaders">
+			<Target title="DreamerUniverse-cvfo">
+				<Option output="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/DreamerUniverse-cvfo.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug"/>
-				<Option type="4"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/src"/>
+					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/third-party"/>
+					<Add directory="c:/SDK/VulkanSDK/1.2.189.2/Include"/>
+					<Add directory="c:/SDK/glfw-3.3.4/include"/>
+					<Add directory="c:/SDK/glm"/>
+					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/third_party"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 Shaders"/>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 DreamerUniverse-cvfo"/>
+					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="DreamerUniverse-cvfo/fast">
+				<Option output="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/DreamerUniverse-cvfo.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/src"/>
+					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/third-party"/>
+					<Add directory="c:/SDK/VulkanSDK/1.2.189.2/Include"/>
+					<Add directory="c:/SDK/glfw-3.3.4/include"/>
+					<Add directory="c:/SDK/glm"/>
+					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/third_party"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 DreamerUniverse-cvfo/fast"/>
 					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
 					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
@@ -48,6 +96,90 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/first_app.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/first_app.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/keyboard_movement_controller.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/keyboard_movement_controller.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_buffer.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_buffer.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_camera.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_camera.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_device.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_device.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_frame_info.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_game_object.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_game_object.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_model.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_model.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_pipeline.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_pipeline.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_renderer.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_renderer.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_swap_chain.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_swap_chain.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_utils.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_window.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/lve_window.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/main.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/simple_render_system.cpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/src/simple_render_system.hpp">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
+		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/third_party/tinyobjloader/tiny_obj_loader.h">
+			<Option target="DreamerUniverse-cvfo"/>
+		</Unit>
 		<Unit filename="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

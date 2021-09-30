@@ -1,12 +1,12 @@
 The system is: Windows - 10.0.19043 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe 
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30133 for x86
+Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30133 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCCompilerId.c
@@ -24,13 +24,13 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is MSVC, found in "C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/CMakeFiles/3.20.2/CompilerIdC/CMakeCCompilerId.exe"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx86/x86/cl.exe 
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe 
 Build flags: 
 Id flags:  
 
 The output was:
 0
-Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30133 for x86
+Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30133 for x64
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 CMakeCXXCompilerId.cpp
@@ -50,22 +50,22 @@ The CXX compiler identification is MSVC, found in "C:/Users/David Work/Desktop/D
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake -f Makefile /nologo cmTC_3a771\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_3a771.dir\build.make /nologo -L                  CMakeFiles\cmTC_3a771.dir\build
-Building C object CMakeFiles/cmTC_3a771.dir/CMakeCCompilerABI.c.obj
-	"C:\Users\David Work\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_3a771.dir\CMakeCCompilerABI.c.obj.d --working-dir="C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\CMakeFiles\CMakeTmp" --filter-prefix="" -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @C:\Users\DAVIDW~1\AppData\Local\Temp\nm6DAE.tmp
-Linking C executable cmTC_3a771.exe
-	"C:\Users\David Work\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3a771.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_3a771.dir\objects1.rsp @C:\Users\DAVIDW~1\AppData\Local\Temp\nm6F36.tmp
+Run Build Command(s):nmake -f Makefile /nologo cmTC_da55a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_da55a.dir\build.make /nologo -L                  CMakeFiles\cmTC_da55a.dir\build
+Building C object CMakeFiles/cmTC_da55a.dir/CMakeCCompilerABI.c.obj
+	"C:\Users\David Work\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_da55a.dir\CMakeCCompilerABI.c.obj.d --working-dir="C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\CMakeFiles\CMakeTmp" --filter-prefix="" -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe @C:\Users\DAVIDW~1\AppData\Local\Temp\nmED36.tmp
+Linking C executable cmTC_da55a.exe
+	"C:\Users\David Work\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_da55a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x64\mt.exe --manifests -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_da55a.dir\objects1.rsp @C:\Users\DAVIDW~1\AppData\Local\Temp\nmED94.tmp
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake -f Makefile /nologo cmTC_be355\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_be355.dir\build.make /nologo -L                  CMakeFiles\cmTC_be355.dir\build
-Building CXX object CMakeFiles/cmTC_be355.dir/CMakeCXXCompilerABI.cpp.obj
-	"C:\Users\David Work\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_be355.dir\CMakeCXXCompilerABI.cpp.obj.d --working-dir="C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\CMakeFiles\CMakeTmp" --filter-prefix="" -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @C:\Users\DAVIDW~1\AppData\Local\Temp\nm7129.tmp
-Linking CXX executable cmTC_be355.exe
-	"C:\Users\David Work\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_be355.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_be355.dir\objects1.rsp @C:\Users\DAVIDW~1\AppData\Local\Temp\nm7188.tmp
+Run Build Command(s):nmake -f Makefile /nologo cmTC_2662a\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\bin\HostX64\x64\nmake.exe"  -f CMakeFiles\cmTC_2662a.dir\build.make /nologo -L                  CMakeFiles\cmTC_2662a.dir\build
+Building CXX object CMakeFiles/cmTC_2662a.dir/CMakeCXXCompilerABI.cpp.obj
+	"C:\Users\David Work\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_2662a.dir\CMakeCXXCompilerABI.cpp.obj.d --working-dir="C:\Users\David Work\Desktop\Dreamer Universe projects\DreamerUniverse-cvfo\cmake-build-debug\CMakeFiles\CMakeTmp" --filter-prefix="" -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\cl.exe @C:\Users\DAVIDW~1\AppData\Local\Temp\nmEF87.tmp
+Linking CXX executable cmTC_2662a.exe
+	"C:\Users\David Work\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\212.5080.54\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_2662a.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x64\mt.exe --manifests -- C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx64\x64\link.exe /nologo @CMakeFiles\cmTC_2662a.dir\objects1.rsp @C:\Users\DAVIDW~1\AppData\Local\Temp\nmEFE6.tmp
 
 
 

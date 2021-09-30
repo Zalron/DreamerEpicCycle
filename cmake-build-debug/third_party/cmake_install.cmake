@@ -32,9 +32,3 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/cmake-build-debug/third_party/gltf/cmake_install.cmake")
-
-endif()
-

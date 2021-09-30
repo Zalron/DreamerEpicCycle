@@ -106,17 +106,329 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Shaders
+# Target rules for targets named DreamerUniverse-cvfo
 
 # Build rule for target.
-Shaders: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) Shaders
-.PHONY : Shaders
+DreamerUniverse-cvfo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) DreamerUniverse-cvfo
+.PHONY : DreamerUniverse-cvfo
 
 # fast build rule for target.
-Shaders\fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Shaders.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Shaders.dir\build
-.PHONY : Shaders\fast
+DreamerUniverse-cvfo\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\build
+.PHONY : DreamerUniverse-cvfo\fast
+
+src\first_app.obj: src\first_app.cpp.obj
+.PHONY : src\first_app.obj
+
+# target to build an object file
+src\first_app.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\first_app.cpp.obj
+.PHONY : src\first_app.cpp.obj
+
+src\first_app.i: src\first_app.cpp.i
+.PHONY : src\first_app.i
+
+# target to preprocess a source file
+src\first_app.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\first_app.cpp.i
+.PHONY : src\first_app.cpp.i
+
+src\first_app.s: src\first_app.cpp.s
+.PHONY : src\first_app.s
+
+# target to generate assembly for a file
+src\first_app.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\first_app.cpp.s
+.PHONY : src\first_app.cpp.s
+
+src\keyboard_movement_controller.obj: src\keyboard_movement_controller.cpp.obj
+.PHONY : src\keyboard_movement_controller.obj
+
+# target to build an object file
+src\keyboard_movement_controller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\keyboard_movement_controller.cpp.obj
+.PHONY : src\keyboard_movement_controller.cpp.obj
+
+src\keyboard_movement_controller.i: src\keyboard_movement_controller.cpp.i
+.PHONY : src\keyboard_movement_controller.i
+
+# target to preprocess a source file
+src\keyboard_movement_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\keyboard_movement_controller.cpp.i
+.PHONY : src\keyboard_movement_controller.cpp.i
+
+src\keyboard_movement_controller.s: src\keyboard_movement_controller.cpp.s
+.PHONY : src\keyboard_movement_controller.s
+
+# target to generate assembly for a file
+src\keyboard_movement_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\keyboard_movement_controller.cpp.s
+.PHONY : src\keyboard_movement_controller.cpp.s
+
+src\lve_buffer.obj: src\lve_buffer.cpp.obj
+.PHONY : src\lve_buffer.obj
+
+# target to build an object file
+src\lve_buffer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_buffer.cpp.obj
+.PHONY : src\lve_buffer.cpp.obj
+
+src\lve_buffer.i: src\lve_buffer.cpp.i
+.PHONY : src\lve_buffer.i
+
+# target to preprocess a source file
+src\lve_buffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_buffer.cpp.i
+.PHONY : src\lve_buffer.cpp.i
+
+src\lve_buffer.s: src\lve_buffer.cpp.s
+.PHONY : src\lve_buffer.s
+
+# target to generate assembly for a file
+src\lve_buffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_buffer.cpp.s
+.PHONY : src\lve_buffer.cpp.s
+
+src\lve_camera.obj: src\lve_camera.cpp.obj
+.PHONY : src\lve_camera.obj
+
+# target to build an object file
+src\lve_camera.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_camera.cpp.obj
+.PHONY : src\lve_camera.cpp.obj
+
+src\lve_camera.i: src\lve_camera.cpp.i
+.PHONY : src\lve_camera.i
+
+# target to preprocess a source file
+src\lve_camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_camera.cpp.i
+.PHONY : src\lve_camera.cpp.i
+
+src\lve_camera.s: src\lve_camera.cpp.s
+.PHONY : src\lve_camera.s
+
+# target to generate assembly for a file
+src\lve_camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_camera.cpp.s
+.PHONY : src\lve_camera.cpp.s
+
+src\lve_device.obj: src\lve_device.cpp.obj
+.PHONY : src\lve_device.obj
+
+# target to build an object file
+src\lve_device.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_device.cpp.obj
+.PHONY : src\lve_device.cpp.obj
+
+src\lve_device.i: src\lve_device.cpp.i
+.PHONY : src\lve_device.i
+
+# target to preprocess a source file
+src\lve_device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_device.cpp.i
+.PHONY : src\lve_device.cpp.i
+
+src\lve_device.s: src\lve_device.cpp.s
+.PHONY : src\lve_device.s
+
+# target to generate assembly for a file
+src\lve_device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_device.cpp.s
+.PHONY : src\lve_device.cpp.s
+
+src\lve_game_object.obj: src\lve_game_object.cpp.obj
+.PHONY : src\lve_game_object.obj
+
+# target to build an object file
+src\lve_game_object.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_game_object.cpp.obj
+.PHONY : src\lve_game_object.cpp.obj
+
+src\lve_game_object.i: src\lve_game_object.cpp.i
+.PHONY : src\lve_game_object.i
+
+# target to preprocess a source file
+src\lve_game_object.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_game_object.cpp.i
+.PHONY : src\lve_game_object.cpp.i
+
+src\lve_game_object.s: src\lve_game_object.cpp.s
+.PHONY : src\lve_game_object.s
+
+# target to generate assembly for a file
+src\lve_game_object.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_game_object.cpp.s
+.PHONY : src\lve_game_object.cpp.s
+
+src\lve_model.obj: src\lve_model.cpp.obj
+.PHONY : src\lve_model.obj
+
+# target to build an object file
+src\lve_model.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_model.cpp.obj
+.PHONY : src\lve_model.cpp.obj
+
+src\lve_model.i: src\lve_model.cpp.i
+.PHONY : src\lve_model.i
+
+# target to preprocess a source file
+src\lve_model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_model.cpp.i
+.PHONY : src\lve_model.cpp.i
+
+src\lve_model.s: src\lve_model.cpp.s
+.PHONY : src\lve_model.s
+
+# target to generate assembly for a file
+src\lve_model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_model.cpp.s
+.PHONY : src\lve_model.cpp.s
+
+src\lve_pipeline.obj: src\lve_pipeline.cpp.obj
+.PHONY : src\lve_pipeline.obj
+
+# target to build an object file
+src\lve_pipeline.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_pipeline.cpp.obj
+.PHONY : src\lve_pipeline.cpp.obj
+
+src\lve_pipeline.i: src\lve_pipeline.cpp.i
+.PHONY : src\lve_pipeline.i
+
+# target to preprocess a source file
+src\lve_pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_pipeline.cpp.i
+.PHONY : src\lve_pipeline.cpp.i
+
+src\lve_pipeline.s: src\lve_pipeline.cpp.s
+.PHONY : src\lve_pipeline.s
+
+# target to generate assembly for a file
+src\lve_pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_pipeline.cpp.s
+.PHONY : src\lve_pipeline.cpp.s
+
+src\lve_renderer.obj: src\lve_renderer.cpp.obj
+.PHONY : src\lve_renderer.obj
+
+# target to build an object file
+src\lve_renderer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_renderer.cpp.obj
+.PHONY : src\lve_renderer.cpp.obj
+
+src\lve_renderer.i: src\lve_renderer.cpp.i
+.PHONY : src\lve_renderer.i
+
+# target to preprocess a source file
+src\lve_renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_renderer.cpp.i
+.PHONY : src\lve_renderer.cpp.i
+
+src\lve_renderer.s: src\lve_renderer.cpp.s
+.PHONY : src\lve_renderer.s
+
+# target to generate assembly for a file
+src\lve_renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_renderer.cpp.s
+.PHONY : src\lve_renderer.cpp.s
+
+src\lve_swap_chain.obj: src\lve_swap_chain.cpp.obj
+.PHONY : src\lve_swap_chain.obj
+
+# target to build an object file
+src\lve_swap_chain.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_swap_chain.cpp.obj
+.PHONY : src\lve_swap_chain.cpp.obj
+
+src\lve_swap_chain.i: src\lve_swap_chain.cpp.i
+.PHONY : src\lve_swap_chain.i
+
+# target to preprocess a source file
+src\lve_swap_chain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_swap_chain.cpp.i
+.PHONY : src\lve_swap_chain.cpp.i
+
+src\lve_swap_chain.s: src\lve_swap_chain.cpp.s
+.PHONY : src\lve_swap_chain.s
+
+# target to generate assembly for a file
+src\lve_swap_chain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_swap_chain.cpp.s
+.PHONY : src\lve_swap_chain.cpp.s
+
+src\lve_window.obj: src\lve_window.cpp.obj
+.PHONY : src\lve_window.obj
+
+# target to build an object file
+src\lve_window.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_window.cpp.obj
+.PHONY : src\lve_window.cpp.obj
+
+src\lve_window.i: src\lve_window.cpp.i
+.PHONY : src\lve_window.i
+
+# target to preprocess a source file
+src\lve_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_window.cpp.i
+.PHONY : src\lve_window.cpp.i
+
+src\lve_window.s: src\lve_window.cpp.s
+.PHONY : src\lve_window.s
+
+# target to generate assembly for a file
+src\lve_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\lve_window.cpp.s
+.PHONY : src\lve_window.cpp.s
+
+src\main.obj: src\main.cpp.obj
+.PHONY : src\main.obj
+
+# target to build an object file
+src\main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\main.cpp.obj
+.PHONY : src\main.cpp.obj
+
+src\main.i: src\main.cpp.i
+.PHONY : src\main.i
+
+# target to preprocess a source file
+src\main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\main.cpp.i
+.PHONY : src\main.cpp.i
+
+src\main.s: src\main.cpp.s
+.PHONY : src\main.s
+
+# target to generate assembly for a file
+src\main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\main.cpp.s
+.PHONY : src\main.cpp.s
+
+src\simple_render_system.obj: src\simple_render_system.cpp.obj
+.PHONY : src\simple_render_system.obj
+
+# target to build an object file
+src\simple_render_system.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\simple_render_system.cpp.obj
+.PHONY : src\simple_render_system.cpp.obj
+
+src\simple_render_system.i: src\simple_render_system.cpp.i
+.PHONY : src\simple_render_system.i
+
+# target to preprocess a source file
+src\simple_render_system.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\simple_render_system.cpp.i
+.PHONY : src\simple_render_system.cpp.i
+
+src\simple_render_system.s: src\simple_render_system.cpp.s
+.PHONY : src\simple_render_system.s
+
+# target to generate assembly for a file
+src\simple_render_system.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\DreamerUniverse-cvfo.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\DreamerUniverse-cvfo.dir\src\simple_render_system.cpp.s
+.PHONY : src\simple_render_system.cpp.s
 
 # Help Target
 help:
@@ -126,7 +438,46 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Shaders
+	@echo ... DreamerUniverse-cvfo
+	@echo ... src/first_app.obj
+	@echo ... src/first_app.i
+	@echo ... src/first_app.s
+	@echo ... src/keyboard_movement_controller.obj
+	@echo ... src/keyboard_movement_controller.i
+	@echo ... src/keyboard_movement_controller.s
+	@echo ... src/lve_buffer.obj
+	@echo ... src/lve_buffer.i
+	@echo ... src/lve_buffer.s
+	@echo ... src/lve_camera.obj
+	@echo ... src/lve_camera.i
+	@echo ... src/lve_camera.s
+	@echo ... src/lve_device.obj
+	@echo ... src/lve_device.i
+	@echo ... src/lve_device.s
+	@echo ... src/lve_game_object.obj
+	@echo ... src/lve_game_object.i
+	@echo ... src/lve_game_object.s
+	@echo ... src/lve_model.obj
+	@echo ... src/lve_model.i
+	@echo ... src/lve_model.s
+	@echo ... src/lve_pipeline.obj
+	@echo ... src/lve_pipeline.i
+	@echo ... src/lve_pipeline.s
+	@echo ... src/lve_renderer.obj
+	@echo ... src/lve_renderer.i
+	@echo ... src/lve_renderer.s
+	@echo ... src/lve_swap_chain.obj
+	@echo ... src/lve_swap_chain.i
+	@echo ... src/lve_swap_chain.s
+	@echo ... src/lve_window.obj
+	@echo ... src/lve_window.i
+	@echo ... src/lve_window.s
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
+	@echo ... src/simple_render_system.obj
+	@echo ... src/simple_render_system.i
+	@echo ... src/simple_render_system.s
 .PHONY : help
 
 
