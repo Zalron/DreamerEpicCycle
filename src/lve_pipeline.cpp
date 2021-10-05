@@ -23,6 +23,7 @@ LvePipeline::~LvePipeline() {
   vkDestroyShaderModule(lveDevice.device(), vertShaderModule, nullptr);
   vkDestroyShaderModule(lveDevice.device(), fragShaderModule, nullptr);
   vkDestroyPipeline(lveDevice.device(), graphicsPipeline, nullptr);
+  //vkDestroyPipelineLayout(lveDevice.device(), graphicsPipeline, nullptr);
 }
 
 std::vector<char> LvePipeline::readFile(const std::string& filepath) {

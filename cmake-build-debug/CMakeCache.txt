@@ -213,6 +213,12 @@ DreamerUniverse-cvfo_BINARY_DIR:STATIC=C:/Users/David Work/Desktop/Dreamer Unive
 //Value Computed by CMake
 DreamerUniverse-cvfo_SOURCE_DIR:STATIC=C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo
 
+//Path to a program.
+GLSLANG_VALIDATOR:FILEPATH=C:/SDK/VulkanSDK/Bin/glslangValidator.exe
+
+//Path to a program.
+GLSL_VALIDATOR:FILEPATH=C:/SDK/VulkanSDK/Bin/glslangValidator.exe
+
 
 ########################
 # INTERNAL cache entries

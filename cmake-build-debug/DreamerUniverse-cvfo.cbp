@@ -26,7 +26,8 @@
 				<Compiler>
 					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/src"/>
 					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/third-party"/>
-					<Add directory="c:/SDK/VulkanSDK/1.2.189.2/Include"/>
+					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/shaders"/>
+					<Add directory="c:/SDK/VulkanSDK/Include"/>
 					<Add directory="c:/SDK/glfw-3.3.4/include"/>
 					<Add directory="c:/SDK/glm"/>
 					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/third_party"/>
@@ -55,7 +56,8 @@
 				<Compiler>
 					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/src"/>
 					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/third-party"/>
-					<Add directory="c:/SDK/VulkanSDK/1.2.189.2/Include"/>
+					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/DreamerUniverse-cvfo/shaders"/>
+					<Add directory="c:/SDK/VulkanSDK/Include"/>
 					<Add directory="c:/SDK/glfw-3.3.4/include"/>
 					<Add directory="c:/SDK/glm"/>
 					<Add directory="C:/Users/David Work/Desktop/Dreamer Universe projects/DreamerUniverse-cvfo/third_party"/>

@@ -29,15 +29,16 @@ FirstApp::FirstApp() { loadGameObjects(); }
 FirstApp::~FirstApp() {}
 
 void FirstApp::run() {
-  LveBuffer globalUboBuffer{
-      lveDevice,
-      sizeof(GlobalUbo),
-      LveSwapChain::MAX_FRAMES_IN_FLIGHT,
-      VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
-      VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT,
-      lveDevice.properties.limits.minUniformBufferOffsetAlignment,
-  };
-  globalUboBuffer.map();
+    std::vector<std::unique_ptr<LveBuffer>> uboBuffers(LveSwapChain::MAX_FRAMES_IN_FLIGHT);
+    for (int i = 0; i < uboBuffers.size(); i++) {
+        uboBuffers[i] = std::make_unique<LveBuffer>(
+                lveDevice,
+                sizeof(GlobalUbo),
+                1,
+                VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
+                VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT);
+        uboBuffers[i]->map();
+    }
 
   SimpleRenderSystem simpleRenderSystem{lveDevice, lveRenderer.getSwapChainRenderPass()};
   LveCamera camera{};
@@ -67,8 +68,8 @@ void FirstApp::run() {
       // update
       GlobalUbo ubo{};
       ubo.projectionView = camera.getProjection() * camera.getView();
-      globalUboBuffer.writeToIndex(&ubo, frameIndex);
-      globalUboBuffer.flushIndex(frameIndex);
+        uboBuffers[frameIndex]->writeToBuffer(&ubo);
+        uboBuffers[frameIndex]->flush();
 
       // render
       lveRenderer.beginSwapChainRenderPass(commandBuffer);
@@ -83,14 +84,14 @@ void FirstApp::run() {
 
 void FirstApp::loadGameObjects() {
   std::shared_ptr<LveModel> lveModel =
-      LveModel::createModelFromFile(lveDevice, "models/flat_vase.obj");
+      LveModel::createModelFromFile(lveDevice, "../models/flat_vase.obj");
   auto flatVase = LveGameObject::createGameObject();
   flatVase.model = lveModel;
   flatVase.transform.translation = {-.5f, .5f, 2.5f};
   flatVase.transform.scale = {3.f, 1.5f, 3.f};
   gameObjects.push_back(std::move(flatVase));
 
-  lveModel = LveModel::createModelFromFile(lveDevice, "models/smooth_vase.obj");
+  lveModel = LveModel::createModelFromFile(lveDevice, "../models/smooth_vase.obj");
   auto smoothVase = LveGameObject::createGameObject();
   smoothVase.model = lveModel;
   smoothVase.transform.translation = {.5f, .5f, 2.5f};
